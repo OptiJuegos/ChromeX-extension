@@ -1,0 +1,4 @@
+/* Global text substitution. Webfont icon sets can change appearance when this is enabled. */
+*:not([class*="icon"]):not([class*="Icon"]):not([class*="material"]):not([class*="fa-"]) {
+  font-family:system-ui,"Segoe UI",Arial,sans-serif!important;
+}

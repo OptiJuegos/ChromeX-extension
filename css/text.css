@@ -1,0 +1,2 @@
+video,iframe,embed,object,img[alt=""],[role="img"][aria-hidden="true"],svg[aria-hidden="true"] { display:none!important }
+*,*::before,*::after { background-image:none!important;animation:none!important;transition:none!important;box-shadow:none!important;filter:none!important;backdrop-filter:none!important;font-family:system-ui,"Segoe UI",Arial,sans-serif!important }

@@ -1,0 +1,21 @@
+/* Site Optimizer paint/layout rules. These are intentionally scoped to known site profiles. */
+
+/* YouTube: preview/ambient UI plus offscreen cards. DNR separately handles animated thumbnail/chat requests. */
+:root[data-cx-site="youtube"] :is(ytd-video-preview,#video-preview,ytd-moving-thumbnail,#cinematics) { display:none!important }
+:root[data-cx-site="youtube"] :is(ytd-rich-item-renderer,ytd-video-renderer,ytd-compact-video-renderer,ytd-comment-thread-renderer) {
+  content-visibility:auto;
+  contain:layout paint style;
+  contain-intrinsic-size:auto 350px;
+}
+
+/* X feed and Instagram posts: skip layout/paint for distant cards without globally containing the page. */
+:root[data-cx-site="x"] article[data-testid="tweet"] {
+  content-visibility:auto;
+  contain:layout paint style;
+  contain-intrinsic-size:auto 650px;
+}
+:root[data-cx-site="instagram"] main article {
+  content-visibility:auto;
+  contain:layout paint style;
+  contain-intrinsic-size:auto 650px;
+}

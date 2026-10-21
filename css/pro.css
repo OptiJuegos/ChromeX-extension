@@ -1,0 +1,23 @@
+/* ChromeX CSS Performance Engine — PRO
+   Strong UI paint/compositing reductions without flattening normal page media. */
+*,*::before,*::after {
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  text-shadow:none!important;
+}
+:where(header,nav,aside,footer,[role="banner"],[role="navigation"],[role="dialog"],[role="menu"],[role="tooltip"],[role="complementary"],button) {
+  box-shadow:none!important;
+}
+/* Restrict filter/blend reduction to interface chrome. */
+:where(header,nav,aside,[role="banner"],[role="navigation"],[role="dialog"],[role="menu"],[role="tooltip"],[role="complementary"]) {
+  filter:none!important;
+  background-blend-mode:normal!important;
+}
+/* Fixed backgrounds can trigger expensive repaints while scrolling. */
+html,body,[style*="background-attachment: fixed" i] {
+  background-attachment:scroll!important;
+}
+/* Decorative infinite-effect class names: keep layout/content untouched. */
+:where([class*="shimmer" i],[class*="glow" i],[class*="ambient" i]) {
+  background-attachment:scroll!important;
+}

@@ -1,0 +1,22 @@
+/* ChromeX CSS Performance Engine — EXTREME
+   Maximum paint/compositing reduction. Visual changes are intentional. */
+*,*::before,*::after {
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+  will-change:auto!important;
+  background-blend-mode:normal!important;
+  mix-blend-mode:normal!important;
+}
+html,* {
+  scroll-behavior:auto!important;
+  background-attachment:scroll!important;
+}
+/* Remove common decorative GPU-heavy backgrounds without blanking ordinary images. */
+:where([class*="skeleton" i],[class*="shimmer" i],[class*="glow" i],[class*="ambient" i],[class*="animated-gradient" i]) {
+  background-image:none!important;
+}
+/* SVG/CSS filter presentation attributes can otherwise survive a global CSS filter reset. */
+svg [filter] { filter:none!important }

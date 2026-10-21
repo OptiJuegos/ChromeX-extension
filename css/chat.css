@@ -1,0 +1,8 @@
+/* YouTube chat is disabled as part of Site Optimizer. The frame request is also blocked by DNR. */
+:root[data-cx-site="youtube"] :is(
+  ytd-live-chat-frame,
+  #chat,
+  #chat-container,
+  #panels ytd-live-chat-frame,
+  ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-live-chat"]
+) { display:none!important }

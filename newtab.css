@@ -1,0 +1,13 @@
+:root{color-scheme:dark;font:16px system-ui,"Segoe UI",Arial,sans-serif;background:#101820;color:#e7edf2}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center}
+main{width:min(650px,85vw)}
+form{display:flex;gap:10px;width:100%}
+input{flex:1;min-width:0;padding:17px;background:#1a2933;border:1px solid #354751;color:#fff;border-radius:9px;font:inherit}
+button{background:#8ceac5;border:0;padding:15px 22px;border-radius:9px;font:inherit;color:#102b20;cursor:pointer}
+nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:26px;width:100%;margin-top:26px;text-align:center}
+a{color:#b9ccc5;font-size:13px;text-decoration:none}
+a:hover{text-decoration:underline}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+:focus-visible{outline:2px solid #8ceac5;outline-offset:3px}
+@media (max-width:560px){form{flex-direction:column}button{width:100%}nav{gap:18px 24px}}

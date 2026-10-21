@@ -1,0 +1,3 @@
+:root[data-cx-site="youtube"] :is(ytd-watch-flexy #secondary,ytd-reel-shelf-renderer,ytd-rich-shelf-renderer[is-shorts],ytd-merch-shelf-renderer),:root[data-cx-site="x"] :is([data-testid="sidebarColumn"],[data-testid="placementTracking"]) { display:none!important }
+/* Instagram class names are unstable; only semantic complementary content. */
+:root[data-cx-site="instagram"] main [role="complementary"] { display:none!important }

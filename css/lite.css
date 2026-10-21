@@ -1,0 +1,10 @@
+/* ChromeX CSS Performance Engine — LITE
+   Low-risk paint reductions. Avoids changing layout, filters or content images. */
+*,*::before,*::after {
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  text-shadow:none!important;
+}
+:where(header,nav,aside,[role="banner"],[role="navigation"],[role="dialog"],[role="menu"],[role="tooltip"]) {
+  box-shadow:none!important;
+}
